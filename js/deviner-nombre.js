@@ -20,17 +20,16 @@
     }
     const MINIMUM = 0, MAXIMUM = 100;
     const LENOMBRE = tireNombre(MINIMUM, MAXIMUM);
-    let numberEquals = false, essai = 0;
-    while (!numberEquals){
-        let number = prompt('Donne moi donc un nombre');
+    let number = 0, essai = 0;
+    do {
+        essai++;
+        number = Number(prompt('Donne moi donc un nombre'));
         if (number > LENOMBRE){
-            window.alert('Ton nombre est trop grand');
+            alert('Ton nombre est trop grand');
         } else if (number < LENOMBRE) {
-            window.alert('Ton nombre est trop petit');
+            alert('Ton nombre est trop petit');
         } else {
-            numberEquals = true;
             window.alert('Wp après ' + essai + ' essai(s) bg !');
         }
-        essai++;
-    }
+    }while (number !== LENOMBRE);
 }()); // main IIFE
