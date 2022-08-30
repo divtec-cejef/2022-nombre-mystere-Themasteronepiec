@@ -18,7 +18,8 @@
     function tireNombre(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
-    const LENOMBRE = tireNombre(0, 100);
+    const MINIMUM = 0, MAXIMUM = 100;
+    const LENOMBRE = tireNombre(MINIMUM, MAXIMUM);
     let numberEquals = false, essai = 0;
     while (!numberEquals){
         let number = prompt('Donne moi donc un nombre');
